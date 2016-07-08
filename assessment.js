@@ -103,12 +103,13 @@ function removeItem(arr, str) {
 //#11 Write a function doubleTheFun that takes 1 parameter it doubles numbers, and
 // repeats strings example 4->8, 2.5->5, 'Awesome'->'AwesomeAwesome'
 function doubleTheFun(param) {
-  if (typeof param === 'number' || typeof parseInt(param) === 'number') {
-    return param * 2;
-  } else if (typeof param === 'string' && param+param !== 'NaN'){
-    return param+param;
-  }
+	if(Number(param)) {
+		return Number(param)*2;
+	}
+	return param+param;
+
 }
+
 
 //#12 Write function getValueOfProperty that takes in an object, and the name of a property on the object
 // return the value from the object that corresponds to the property
